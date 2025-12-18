@@ -354,6 +354,6 @@ Includes:
 
 **Marine d’Arbaumont**
 
-**Ghali Pennis**
+**Ghali Bennis**
 ESSEC – CentraleSupélec
 Bachelor in AI, Data & Management Science
