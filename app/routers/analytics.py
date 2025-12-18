@@ -118,65 +118,6 @@ def get_late_deliveries_by_department(
     return DepartmentBottlenecksResponse(items=items)
 
 
-
-@router.get(
-    "/bottlenecks/late-deliveries-by-department",
-    response_model=DepartmentBottlenecksResponse,
-)
-def get_late_deliveries_by_department(
-    limit: int = Query(10, ge=1, le=100),
-):
-    """
-    Find departments that are bottlenecks based on late deliveries.
-    """
-    driver = get_driver()
-
-    with driver.session() as session:
-        result = session.run(
-            """
-            MATCH (d:Department)<-[:FROM_DEPARTMENT]-(o:Order)
-            WITH d, collect(o) AS orders
-            WITH
-              d,
-              orders,
-              [o IN orders WHERE o.late_delivery_risk = 1] AS late_orders_list,
-              size(orders) AS total_orders
-            WITH
-              d,
-              size(late_orders_list) AS late_orders,
-              total_orders,
-              CASE
-                WHEN total_orders = 0 THEN 0.0
-                ELSE 100.0 * size(late_orders_list) / total_orders
-              END AS late_ratio
-            RETURN
-              d.department_id AS department_id,
-              d.name AS department_name,
-              d.market AS market,
-              late_orders,
-              total_orders,
-              late_ratio
-            ORDER BY late_ratio DESC, late_orders DESC
-            LIMIT $limit
-            """,
-            limit=limit,
-        )
-
-        items: List[DepartmentBottleneck] = []
-        for record in result:
-            items.append(
-                DepartmentBottleneck(
-                    department_id=record["department_id"],
-                    department_name=record["department_name"],
-                    market=record["market"],
-                    late_orders=record["late_orders"],
-                    total_orders=record["total_orders"],
-                    late_ratio=record["late_ratio"],
-                )
-            )
-
-    return DepartmentBottlenecksResponse(items=items)
-
 # Shortest path endpoints
 
 
