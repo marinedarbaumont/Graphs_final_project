@@ -1,0 +1,31 @@
+[MASTER]
+ignore=tests
+load-plugins=
+
+[MESSAGES CONTROL]
+disable=
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring
+    C0116,  # missing-function-docstring
+    R0903,  # too-few-public-methods
+    R0913,  # too-many-arguments
+    R0914,  # too-many-locals
+    W0511,  # TODO/FIXME comments
+    E0401,  # import-error (Docker/env related)
+    E0611,  # no-name-in-module
+    W0703   # broad-except
+
+[FORMAT]
+max-line-length=120
+
+[DESIGN]
+max-args=7
+max-locals=20
+max-returns=6
+max-branches=15
+max-statements=60
+
+[REPORTS]
+output-format=text
+reports=no
+score=yes
