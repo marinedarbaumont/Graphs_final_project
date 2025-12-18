@@ -16,7 +16,7 @@ disable=
     W0703   # broad-except
 
 [FORMAT]
-max-line-length=120
+max-line-length=123
 
 [DESIGN]
 max-args=7
