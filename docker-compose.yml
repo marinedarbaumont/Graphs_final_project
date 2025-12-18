@@ -38,7 +38,7 @@ services:
       - "8000"
     networks:
       - backend
-     environment:
+    environment:
       - GROQ_API_KEY=${GROQ_API_KEY}
 
   nginx:

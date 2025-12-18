@@ -28,5 +28,7 @@ def llm_query(payload: LLMQueryRequest):
         driver = get_driver()
         with driver.session() as session:
             return run_llm_query(session, payload.question)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) from e
