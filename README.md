@@ -106,6 +106,7 @@ No secrets are hardcoded.
 
 ```bash
 make docker-run
+
 ```
 
 This will:
@@ -114,6 +115,10 @@ This will:
 * Start Neo4j, API, Nginx
 * Wait for Neo4j readiness
 * Automatically seed the database
+
+<img width="451" height="144" alt="Screenshot 2025-12-18 at 23 36 30" src="https://github.com/user-attachments/assets/4f496c9a-83b1-479d-9742-4026d7e5a6ec" />
+
+<img width="369" height="116" alt="Screenshot 2025-12-18 at 23 36 39" src="https://github.com/user-attachments/assets/9946cbb2-f04e-4edc-bf39-4fbfcecbf580" />
 
 To reset everything:
 
