@@ -353,19 +353,14 @@ Nginx is used as a **reverse proxy** in front of the API:
 
 📁 `demo.ipynb`
 
-Includes:
-
-* Graph exploration
-* Cypher queries
-* Visual inspection of relationships
-* GDS algorithm examples
-
 
 
 ---
 
 ## 🔁 Git Practices
 
+<img width="449" height="226" alt="Screenshot 2025-12-19 at 13 22 16" src="https://github.com/user-attachments/assets/0cd2c42a-a76b-47d0-99a2-6a8d09b61e41" />
+<img width="708" height="267" alt="Screenshot 2025-12-19 at 13 22 23" src="https://github.com/user-attachments/assets/abc14fcb-cc45-43fc-8961-9b63f2343823" />
 
 
 ---
