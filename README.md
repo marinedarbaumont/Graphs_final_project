@@ -39,7 +39,9 @@ The goal is to model a real-world supply chain dataset as a **knowledge graph** 
 | Neo4j Bolt    | bolt://localhost:7687                          |
 
 📐 **System architecture diagram**
-📁 Provided as a diagram (draw.io) in the project submission.
+
+<img width="1071" height="622" alt="architecture drawio" src="https://github.com/user-attachments/assets/1e56a820-a391-4bc6-b1b5-e858ea711663" />
+
 
 ---
 
@@ -70,6 +72,7 @@ The goal is to model a real-world supply chain dataset as a **knowledge graph** 
 
 📊 **Neo4j graph schema diagram**
 
+<img width="1112" height="691" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/6532781e-d02a-4544-bf8f-482a97f50ba0" />
 
 
 ---
@@ -120,6 +123,8 @@ This will:
 
 <img width="369" height="116" alt="Screenshot 2025-12-18 at 23 36 39" src="https://github.com/user-attachments/assets/9946cbb2-f04e-4edc-bf39-4fbfcecbf580" />
 
+<img width="327" height="93" alt="Screenshot 2025-12-18 at 23 36 46" src="https://github.com/user-attachments/assets/21fcaaf0-b054-43fc-b592-53ca6f3f6155" />
+
 To reset everything:
 
 ```bash
@@ -129,6 +134,10 @@ make docker-down
 ---
 
 ## 📡 FastAPI Endpoints
+
+<img width="1470" height="956" alt="Screenshot 2025-12-18 at 23 45 19" src="https://github.com/user-attachments/assets/414627e8-0fb2-4411-b309-200166204da9" />
+
+<img width="1470" height="956" alt="Screenshot 2025-12-18 at 23 45 27" src="https://github.com/user-attachments/assets/e47c912c-1051-4835-8a7f-f9f6dbf387a9" />
 
 ### Health
 
@@ -275,6 +284,7 @@ Includes:
 * Neo4j connection tests
 * Cypher query tests
 
+<img width="341" height="58" alt="Screenshot 2025-12-18 at 23 52 04" src="https://github.com/user-attachments/assets/c7ee0271-bb64-4792-bcb9-95bb9a6b996a" />
 
 
 ---
@@ -288,19 +298,24 @@ make coverage
 ✔ Coverage ≥ **60%**
 ✔ HTML report generated in `htmlcov/index.html`
 
+<img width="681" height="338" alt="Screenshot 2025-12-18 at 23 52 14" src="https://github.com/user-attachments/assets/7f18a4da-40af-480e-8588-f0b331ecf826" />
+
+
 ---
 
 ## 🧹 Linting & Formatting
 
 ```bash
 make lint
-make format
 ```
 
 * `.pylintrc` included
 * pylint score ≥ **9.5 / 10**
 * PEP 8 compliant
 * Docstrings in all modules
+
+<img width="497" height="46" alt="Screenshot 2025-12-18 at 23 45 07" src="https://github.com/user-attachments/assets/a2282752-f28d-4ed4-8d80-9b6e9ac0cae0" />
+
 
 ---
 
